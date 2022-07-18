@@ -12,7 +12,7 @@ void printing(int array[], int arraySize)
 
 int main()
 {
-    int arraySize, i, insertPos, newElement;
+    int arraySize, i, insertPos, newElement, delElement;
     int array[50];
     printf("Enter the preffered array size\n");
     scanf("%d", &arraySize);
@@ -68,6 +68,17 @@ int main()
     arraySize++;
     // complexity for inserting at the end O(1)
     printf("Inserting element at the end.....\tNew Array:\n");
+    printing(array, arraySize);
+    // deleting from the array
+    printf("\nEnter the position of the array that you want to delete\n");
+    scanf("%d", &delElement);
+    delElement = delElement - 1;
+    for (i = delElement; i < arraySize; i++)
+    {
+        array[i] = array[i + 1];
+    }
+    arraySize--;
+    printf("Deleting the number ...\t New Array:\n");
     printing(array, arraySize);
     return 0;
 }

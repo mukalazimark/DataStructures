@@ -25,5 +25,6 @@ int main()
         printf("The number %d exists\n", searchNum);
     }
     // complexity is O(n) least complexity O(1) when the search number is at the start of the array
+
     return 0;
 }
